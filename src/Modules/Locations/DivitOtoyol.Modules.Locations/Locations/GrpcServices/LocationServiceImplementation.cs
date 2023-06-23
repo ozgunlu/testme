@@ -10,28 +10,31 @@ namespace DivitOtoyol.Modules.Locations.Locations.GrpcServices;
 
 public class LocationServiceImplementation : LocationService.LocationServiceBase
 {
-    private readonly IServiceScopeFactory _serviceScopeFactory;
+    private readonly IServiceProvider _serviceProvider;
 
-    public LocationServiceImplementation(IServiceScopeFactory serviceScopeFactory)
+    public LocationServiceImplementation(IServiceProvider serviceProvider)
     {
-        _serviceScopeFactory = serviceScopeFactory;
+        _serviceProvider = serviceProvider;
     }
 
     public override async Task<LocationResponse> GetLocationById(LocationByIdRequest request, ServerCallContext context)
     {
         Guard.Against.Null(request, nameof(request));
 
-        using var scope = _serviceScopeFactory.CreateScope();
-        var locationDbContext = scope.ServiceProvider.GetRequiredService<ILocationDbContext>();
-
-        var location = await locationDbContext.FindLocationAsync(request.Id) ?? throw new LocationNotFoundException(request.Id);
-
-        return new LocationResponse
+        using (var scope = _serviceProvider.CreateScope())
         {
-            Id = location.Id,
-            ParentId = location.ParentId,
-            Name = location.Name,
-            Created = Timestamp.FromDateTime(DateTime.SpecifyKind(location.Created, DateTimeKind.Utc)),
-        };
+            var locationDbContext = scope.ServiceProvider.GetRequiredService<ILocationDbContext>();
+
+            var location = await locationDbContext.FindLocationAsync(request.Id) ?? throw new LocationNotFoundException(request.Id);
+
+            return new LocationResponse
+            {
+                Id = location.Id,
+                ParentId = location.ParentId,
+                Name = location.Name,
+                Created = Timestamp.FromDateTime(DateTime.SpecifyKind(location.Created, DateTimeKind.Utc)),
+            };
+        }
     }
 }
+

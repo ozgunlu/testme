@@ -17,7 +17,7 @@ public static class LocationsConfigs
     {
         services.AddScoped<IDataSeeder, LocationDataSeeder>();
         services.AddSingleton<IEventMapper, LocationEventMapper>();
-        services.AddTransient<LocationServiceImplementation>();
+        services.AddScoped<LocationServiceImplementation>();
         return services;
     }
 
