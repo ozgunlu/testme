@@ -1,0 +1,15 @@
+{
+  "Reports": {
+    "PlateRecognitionsApiClientOptions": {
+      "BaseApiAddress": "http://localhost:5000",
+      "RecordsEndpoint": "api/v1/plate-recognitions/records"
+    },
+    "OptionsApiClientOptions": {
+      "BaseApiAddress": "http://localhost:5000",
+      "OptionsEndpoint": "api/v1/systems/options"
+    },
+    "MessagePersistenceOptions": {
+      "Interval": 30
+    }
+  }
+}

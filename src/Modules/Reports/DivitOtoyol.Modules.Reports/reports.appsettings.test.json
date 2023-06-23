@@ -1,0 +1,15 @@
+{
+  "Reports": {
+    "RecordsApiClientOptions": {
+      "BaseApiAddress": "http://localhost:5000",
+      "LocationsEndpoint": "api/v1/records/records"
+    },
+    "SystemsApiClientOptions": {
+      "BaseApiAddress": "http://localhost:5000",
+      "OptionsEndpoint": "api/v1/systems/options"
+    },
+    "MessagePersistenceOptions": {
+      "Interval": 5
+    }
+  }
+}

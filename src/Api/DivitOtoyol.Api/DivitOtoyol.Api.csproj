@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+    <ProjectReference Include="..\..\Modules\Cameras\DivitOtoyol.Modules.Cameras\DivitOtoyol.Modules.Cameras.csproj" />
+    <ProjectReference Include="..\..\Modules\Catalogs\ECommerce.Modules.Catalogs\ECommerce.Modules.Catalogs.csproj" />
+    <ProjectReference Include="..\..\Modules\Customers\ECommerce.Modules.Customers\ECommerce.Modules.Customers.csproj" />
+    <ProjectReference Include="..\..\Modules\Identity\ECommerce.Modules.Identity\ECommerce.Modules.Identity.csproj" />
+    <ProjectReference Include="..\..\Modules\Locations\DivitOtoyol.Modules.Locations\DivitOtoyol.Modules.Locations.csproj" />
+    <ProjectReference Include="..\..\Modules\Orders\ECommerce.Modules.Orders\ECommerce.Modules.Orders.csproj" />
+    <ProjectReference Include="..\..\Modules\PlateRecognitions\DivitOtoyol.Modules.PlateRecognitions\DivitOtoyol.Modules.PlateRecognitions.csproj" />
+    <ProjectReference Include="..\..\Modules\Servers\DivitOtoyol.Modules.Servers\DivitOtoyol.Modules.Servers.csproj" />
+    <ProjectReference Include="..\..\Modules\System\DivitOtoyol.Modules.System\DivitOtoyol.Modules.Systems.csproj" />
+    <ProjectReference Include="..\..\Modules\Vehicles\DivitOtoyol.Modules.Vehicles\DivitOtoyol.Modules.Vehicles.csproj" />
+  </ItemGroup>
+</Project>

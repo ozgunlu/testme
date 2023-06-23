@@ -1,0 +1,31 @@
+{
+  "PlateRecognitions": {
+    "PostgresOptions": {
+      "ConnectionString": "Server=localhost;Port=5432;Database=divitotoyol.services.plate_recognitions-test;User Id=postgres;Password=1234;",
+      "UseInMemory": false
+    },
+    "MongoOptions": {
+      "ConnectionString": "mongodb://localhost:27017",
+      "DatabaseName": "divitotoyol-services-plate_recognitions-test"
+    },
+    "CamerasApiClientOptions": {
+      "BaseApiAddress": "http://localhost:5000",
+      "CamerasEndpoint": "api/v1/cameras/cameras"
+    },
+    "MakesApiClientOptions": {
+      "BaseApiAddress": "http://localhost:5000",
+      "MakesEndpoint": "api/v1/vehicles/makes"
+    },
+    "ModelsApiClientOptions": {
+      "BaseApiAddress": "http://localhost:5000",
+      "ModelsEndpoint": "api/v1/vehicles/models"
+    },
+    "ColorsApiClientOptions": {
+      "BaseApiAddress": "http://localhost:5000",
+      "ColorsEndpoint": "api/v1/vehicles/colors"
+    },
+    "MessagePersistenceOptions": {
+      "Interval": 5
+    }
+  }
+}

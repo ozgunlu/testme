@@ -1,0 +1,11 @@
+{
+  "Systems": {
+    "PostgresOptions": {
+      "ConnectionString": "Server=localhost;Port=5432;Database=divitotoyol.services.systems;User Id=postgres;Password=1234;",
+      "UseInMemory": false
+    },
+    "MessagePersistenceOptions": {
+      "Interval": 30
+    }
+  }
+}

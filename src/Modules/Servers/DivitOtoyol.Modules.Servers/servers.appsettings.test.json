@@ -1,0 +1,19 @@
+{
+  "Servers": {
+    "PostgresOptions": {
+      "ConnectionString": "Server=localhost;Port=5432;Database=divitotoyol.services.servers-test;User Id=postgres;Password=1234;",
+      "UseInMemory": false
+    },
+    "MongoOptions": {
+      "ConnectionString": "mongodb://localhost:27017",
+      "DatabaseName": "divitotoyol-services-servers-test"
+    },
+    "LocationsApiClientOptions": {
+      "BaseApiAddress": "http://localhost:5000",
+      "LocationsEndpoint": "api/v1/locations/locations"
+    },
+    "MessagePersistenceOptions": {
+      "Interval": 5
+    }
+  }
+}
