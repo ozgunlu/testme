@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DivitOtoyol.Modules.Vehicles.Shared.Data.Migrations.Vehicles
 {
     [DbContext(typeof(VehicleDbContext))]
-    [Migration("20230620064010_InitialVehicleMigration")]
+    [Migration("20230623214136_InitialVehicleMigration")]
     partial class InitialVehicleMigration
     {
         /// <inheritdoc />

@@ -10,18 +10,21 @@ namespace DivitOtoyol.Modules.Locations.Locations.GrpcServices;
 
 public class LocationServiceImplementation : LocationService.LocationServiceBase
 {
-    private readonly ILocationDbContext _locationDbContext;
+    private readonly IServiceScopeFactory _serviceScopeFactory;
 
-    public LocationServiceImplementation(ILocationDbContext locationDbContext)
+    public LocationServiceImplementation(IServiceScopeFactory serviceScopeFactory)
     {
-        _locationDbContext = locationDbContext;
+        _serviceScopeFactory = serviceScopeFactory;
     }
 
     public override async Task<LocationResponse> GetLocationById(LocationByIdRequest request, ServerCallContext context)
     {
         Guard.Against.Null(request, nameof(request));
 
-        var location = await _locationDbContext.FindLocationAsync(request.Id) ?? throw new LocationNotFoundException(request.Id);
+        using var scope = _serviceScopeFactory.CreateScope();
+        var locationDbContext = scope.ServiceProvider.GetRequiredService<ILocationDbContext>();
+
+        var location = await locationDbContext.FindLocationAsync(request.Id) ?? throw new LocationNotFoundException(request.Id);
 
         return new LocationResponse
         {

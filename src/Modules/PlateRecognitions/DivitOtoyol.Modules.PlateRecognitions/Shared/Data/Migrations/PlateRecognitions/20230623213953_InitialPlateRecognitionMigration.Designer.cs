@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DivitOtoyol.Modules.PlateRecognitions.Shared.Data.Migrations.PlateRecognitions
 {
     [DbContext(typeof(PlateRecognitionDbContext))]
-    [Migration("20230620065021_InitialPlateRecognitionMigration")]
+    [Migration("20230623213953_InitialPlateRecognitionMigration")]
     partial class InitialPlateRecognitionMigration
     {
         /// <inheritdoc />

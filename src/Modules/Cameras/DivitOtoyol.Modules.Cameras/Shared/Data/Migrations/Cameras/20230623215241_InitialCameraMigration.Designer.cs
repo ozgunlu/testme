@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DivitOtoyol.Modules.Cameras.Shared.Data.Migrations.Cameras
 {
     [DbContext(typeof(CameraDbContext))]
-    [Migration("20230620060703_InitialCameraMigration")]
+    [Migration("20230623215241_InitialCameraMigration")]
     partial class InitialCameraMigration
     {
         /// <inheritdoc />

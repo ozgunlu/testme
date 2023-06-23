@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DivitOtoyol.Modules.Systems.Shared.Data.Migrations.Systems
 {
     [DbContext(typeof(SystemDbContext))]
-    [Migration("20230620060459_InitialSystemMigration")]
+    [Migration("20230623213910_InitialSystemMigration")]
     partial class InitialSystemMigration
     {
         /// <inheritdoc />

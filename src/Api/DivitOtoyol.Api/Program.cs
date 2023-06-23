@@ -118,7 +118,10 @@ static void RegisterServices(WebApplicationBuilder builder)
             new(ApiConstants.Role.User, new List<string> {ApiConstants.Role.User})
         });
 
-    builder.Services.AddGrpc();
+    builder.Services.AddGrpc(options =>
+    {
+        options.EnableDetailedErrors = true;
+    });
 }
 
 static async Task ConfigureApplication(WebApplication app)
