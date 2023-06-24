@@ -17,14 +17,13 @@ public static class LocationsConfigs
     {
         services.AddScoped<IDataSeeder, LocationDataSeeder>();
         services.AddSingleton<IEventMapper, LocationEventMapper>();
-        services.AddScoped<LocationServiceImplementation>();
+        services.AddScoped<ILocationService, LocationService>();
         return services;
     }
 
     internal static IEndpointRouteBuilder MapLocationsEndpoints(this IEndpointRouteBuilder endpoints)
     {
         VersionSet = endpoints.NewApiVersionSet(Tag).Build();
-        endpoints.MapGrpcService<LocationServiceImplementation>();
         return endpoints;
     }
 }

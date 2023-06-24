@@ -5,9 +5,9 @@ namespace DivitOtoyol.Modules.Cameras.Shared.Location;
 
 public class LocationGrpcClient : ILocationGrpcClient
 {
-    private readonly LocationService.LocationServiceClient _client;
+    private readonly LocationServiceProto.LocationServiceProtoClient _client;
 
-    public LocationGrpcClient(LocationService.LocationServiceClient client)
+    public LocationGrpcClient(LocationServiceProto.LocationServiceProtoClient client)
     {
         _client = client;
     }

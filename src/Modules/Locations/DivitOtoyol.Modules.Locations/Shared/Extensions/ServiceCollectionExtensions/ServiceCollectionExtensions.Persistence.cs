@@ -1,5 +1,6 @@
 using BuildingBlocks.Abstractions.Persistence;
 using BuildingBlocks.Persistence.EfCore.Postgres;
+using DivitOtoyol.Modules.Locations.Locations.GrpcServices;
 using DivitOtoyol.Modules.Locations.Shared.Contracts;
 using DivitOtoyol.Modules.Locations.Shared.Data;
 using Microsoft.EntityFrameworkCore;

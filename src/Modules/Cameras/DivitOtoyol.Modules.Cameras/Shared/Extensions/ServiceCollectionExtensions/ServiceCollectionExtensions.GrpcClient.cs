@@ -14,7 +14,7 @@ public static partial class ServiceCollectionExtensions
                     $"{CameraModuleConfiguration.ModuleName}:{nameof(LocationsGrpcClientOptions)}"))
             .ValidateDataAnnotations();
 
-        services.AddGrpcClient<LocationService.LocationServiceClient>(o =>
+        services.AddGrpcClient<LocationServiceProto.LocationServiceProtoClient>(o =>
         {
             o.Address = new Uri(configuration["Cameras:LocationsGrpcClientOptions:BaseGrpcAddress"]);
         });

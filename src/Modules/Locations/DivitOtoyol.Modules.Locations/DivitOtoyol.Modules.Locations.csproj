@@ -60,7 +60,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="Locations\Protos\LocationService.proto" GrpcServices="Both" />
+    <Protobuf Include="Locations\Protos\LocationServiceProto.proto" GrpcServices="Both" />
   </ItemGroup>
 
 </Project>

@@ -5,7 +5,7 @@ import "google/protobuf/timestamp.proto";
 package DivitOtoyol.Modules.Locations.Locations.Protos;
 
 // The location service definition.
-service LocationService {
+service LocationServiceProto {
   // Gets a location by its ID.
   rpc GetLocationById (LocationByIdRequest) returns (LocationResponse);
 }

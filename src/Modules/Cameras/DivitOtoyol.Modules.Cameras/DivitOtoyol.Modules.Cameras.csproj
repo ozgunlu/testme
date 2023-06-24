@@ -63,7 +63,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="..\..\Locations\DivitOtoyol.Modules.Locations\Locations\Protos\LocationService.proto" GrpcServices="Client" />
+    <Protobuf Include="..\..\Locations\DivitOtoyol.Modules.Locations\Locations\Protos\LocationServiceProto.proto" GrpcServices="Client" />
   </ItemGroup>
 
 </Project>
