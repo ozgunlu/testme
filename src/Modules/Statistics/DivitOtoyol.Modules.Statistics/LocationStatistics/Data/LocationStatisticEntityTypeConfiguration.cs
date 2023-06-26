@@ -1,14 +1,14 @@
 using BuildingBlocks.Core.Persistence.EfCore;
-using DivitOtoyol.Modules.Statistics.PlateStatistics.Models;
+using DivitOtoyol.Modules.Statistics.LocationStatistics.Models;
 using DivitOtoyol.Modules.Statistics.Shared.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DivitOtoyol.Modules.Statistics.LocationStatistics.Data;
 
-public class LocationStatisticEntityTypeConfiguration : IEntityTypeConfiguration<PlateStatistic>
+public class LocationStatisticEntityTypeConfiguration : IEntityTypeConfiguration<LocationStatistic>
 {
-    public void Configure(EntityTypeBuilder<PlateStatistic> builder)
+    public void Configure(EntityTypeBuilder<LocationStatistic> builder)
     {
         builder.ToTable("location_statistics", StatisticDbContext.DefaultSchema);
 

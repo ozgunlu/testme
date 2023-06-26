@@ -1,17 +1,16 @@
 using BuildingBlocks.Core.Persistence.EfCore;
-using DivitOtoyol.Modules.Statistics.PlateStatistics.Models;
+using DivitOtoyol.Modules.Statistics.CameraStatistics.Models;
 using DivitOtoyol.Modules.Statistics.Shared.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DivitOtoyol.Modules.Statistics.CameraStatistics.Data;
 
-public class CameraStatisticEntityTypeConfiguration : IEntityTypeConfiguration<PlateStatistic>
+public class CameraStatisticEntityTypeConfiguration : IEntityTypeConfiguration<CameraStatistic>
 {
-    public void Configure(EntityTypeBuilder<PlateStatistic> builder)
+    public void Configure(EntityTypeBuilder<CameraStatistic> builder)
     {
         builder.ToTable("camera_statistics", StatisticDbContext.DefaultSchema);
-
         builder.HasKey(c => c.Id);
         builder.HasIndex(x => x.Id).IsUnique();
 

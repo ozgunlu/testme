@@ -18,12 +18,13 @@ public class RecordEventMapper : IEventMapper
                     e.Record.Plate,
                     e.Record.CameraInformation.Id,
                     e.Record.CameraInformation.Name,
-                    e.Record.MakeInformation?.Id,
+                    e.Record.MakeInformation?.Id.Value,
                     e.Record.MakeInformation?.Name,
-                    e.Record.ModelInformation?.Id,
+                    e.Record.ModelInformation?.Id.Value,
                     e.Record.ModelInformation?.Name,
-                    e.Record.ColorInformation?.Id,
-                    e.Record.ColorInformation?.Name),
+                    e.Record.ColorInformation?.Id.Value,
+                    e.Record.ColorInformation?.Name,
+                    e.Record.LprDate),
             _ => null
         };
     }
