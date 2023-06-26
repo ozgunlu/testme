@@ -137,6 +137,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reports", "Reports", "{C848
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DivitOtoyol.Modules.Reports", "src\Modules\Reports\DivitOtoyol.Modules.Reports\DivitOtoyol.Modules.Reports.csproj", "{90F500B3-1615-47E1-9A60-62681F8967BC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Statistics", "Statistics", "{970B9D20-3C6F-47EC-B802-549295C5EA6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivitOtoyol.Modules.Statistics", "src\Modules\Statistics\DivitOtoyol.Modules.Statistics\DivitOtoyol.Modules.Statistics.csproj", "{857A4FF6-F791-4638-8856-ECAF487C269A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -279,6 +283,10 @@ Global
 		{90F500B3-1615-47E1-9A60-62681F8967BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90F500B3-1615-47E1-9A60-62681F8967BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90F500B3-1615-47E1-9A60-62681F8967BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{857A4FF6-F791-4638-8856-ECAF487C269A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{857A4FF6-F791-4638-8856-ECAF487C269A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{857A4FF6-F791-4638-8856-ECAF487C269A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{857A4FF6-F791-4638-8856-ECAF487C269A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -342,6 +350,8 @@ Global
 		{09387EF6-028F-4187-B387-90C0CAE661E3} = {758601D7-A8CE-4685-A899-1E6A647F25B5}
 		{C84850B6-C4A6-4814-9B48-4D9EE1E3A401} = {9A277A93-3A5C-4E7E-A360-7ED4DD0E9DE1}
 		{90F500B3-1615-47E1-9A60-62681F8967BC} = {C84850B6-C4A6-4814-9B48-4D9EE1E3A401}
+		{970B9D20-3C6F-47EC-B802-549295C5EA6C} = {9A277A93-3A5C-4E7E-A360-7ED4DD0E9DE1}
+		{857A4FF6-F791-4638-8856-ECAF487C269A} = {970B9D20-3C6F-47EC-B802-549295C5EA6C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E003603C-6992-4AAA-8A96-3B0C74A016F2}

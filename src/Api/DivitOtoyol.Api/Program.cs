@@ -15,6 +15,7 @@ using DivitOtoyol.Modules.Cameras;
 using DivitOtoyol.Modules.Locations;
 using DivitOtoyol.Modules.PlateRecognitions;
 using DivitOtoyol.Modules.Servers;
+using DivitOtoyol.Modules.Statistics;
 using DivitOtoyol.Modules.Systems;
 using DivitOtoyol.Modules.Vehicles;
 using ECommerce.Modules.Catalogs;
@@ -107,7 +108,7 @@ static void RegisterServices(WebApplicationBuilder builder)
     {
         typeof(CatalogRoot).Assembly, typeof(IdentityRoot).Assembly, typeof(OrdersRoot).Assembly,
         typeof(CustomersRoot).Assembly, typeof(SystemRoot).Assembly, typeof(LocationRoot).Assembly, typeof(ServerRoot).Assembly,
-        typeof(CameraRoot).Assembly, typeof(VehicleRoot).Assembly, typeof(PlateRecognitionRoot).Assembly
+        typeof(CameraRoot).Assembly, typeof(VehicleRoot).Assembly, typeof(PlateRecognitionRoot).Assembly, typeof(StatisticRoot).Assembly
     });
 
     builder.Services.AddCustomJwtAuthentication(builder.Configuration);
@@ -117,12 +118,6 @@ static void RegisterServices(WebApplicationBuilder builder)
             new(ApiConstants.Role.Admin, new List<string> {ApiConstants.Role.Admin}),
             new(ApiConstants.Role.User, new List<string> {ApiConstants.Role.User})
         });
-
-
-    builder.Services.AddGrpc(options =>
-    {
-        options.EnableDetailedErrors = true;
-    });
 }
 
 static async Task ConfigureApplication(WebApplication app)

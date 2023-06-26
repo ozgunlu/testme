@@ -3,7 +3,6 @@ using BuildingBlocks.Core;
 using BuildingBlocks.Core.Extensions;
 using BuildingBlocks.Core.Messaging.Extensions;
 using DivitOtoyol.Modules.Locations.Locations;
-using DivitOtoyol.Modules.Locations.Locations.GrpcServices;
 using DivitOtoyol.Modules.Locations.Shared.Extensions.ApplicationBuilderExtensions;
 using DivitOtoyol.Modules.Locations.Shared.Extensions.ServiceCollectionExtensions;
 
@@ -21,7 +20,6 @@ public class LocationModuleConfiguration : IModuleDefinition
     {
         services.AddInfrastructure(configuration);
         services.AddStorage(configuration);
-
         // Add Sub Modules Services
         services.AddLocationsServices();
     }
@@ -51,8 +49,6 @@ public class LocationModuleConfiguration : IModuleDefinition
     public void MapEndpoints(IEndpointRouteBuilder endpoints)
     {
         // Add Sub Modules Endpoints
-        endpoints.MapGrpcService<ILocationService>();
-
         endpoints.MapLocationsEndpoints();
 
         endpoints.MapGet("locations", (HttpContext context) =>

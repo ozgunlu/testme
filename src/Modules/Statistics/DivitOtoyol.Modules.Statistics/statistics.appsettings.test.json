@@ -1,0 +1,15 @@
+{
+  "Statistics": {
+    "PostgresOptions": {
+      "ConnectionString": "Server=localhost;Port=5432;Database=divitotoyol.services.statistics-test;User Id=postgres;Password=1234;",
+      "UseInMemory": false
+    },
+    "MongoOptions": {
+      "ConnectionString": "mongodb://localhost:27017",
+      "DatabaseName": "divitotoyol-services-statistics-test"
+    },
+    "MessagePersistenceOptions": {
+      "Interval": 5
+    }
+  }
+}

@@ -41,18 +41,18 @@ public class CreateCameraValidator : AbstractValidator<CreateCamera>
 public class CreateCameraHandler : ICommandHandler<CreateCamera, CreateCameraResponse>
 {
     private readonly CameraDbContext _cameraDbContext;
-    private readonly ILocationGrpcClient _locationGrpcClient;
+    private readonly ILocationApiClient _locationApiClient;
     private readonly ILogger<CreateCameraHandler> _logger;
     private readonly IMapper _mapper;
 
     public CreateCameraHandler(
         CameraDbContext cameraDbContext,
-        ILocationGrpcClient locationGrpcClient,
+        ILocationApiClient locationApiClient,
         IMapper mapper,
         ILogger<CreateCameraHandler> logger)
     {
         _cameraDbContext = cameraDbContext;
-        _locationGrpcClient = locationGrpcClient;
+        _locationApiClient = locationApiClient;
         _mapper = mapper;
         _logger = logger;
     }
@@ -63,7 +63,7 @@ public class CreateCameraHandler : ICommandHandler<CreateCamera, CreateCameraRes
     {
         Guard.Against.Null(command, nameof(command));
 
-        var location = (await _locationGrpcClient.GetLocationByIdAsync(command.LocationId, cancellationToken));
+        var location = (await _locationApiClient.GetLocationByIdAsync(command.LocationId, cancellationToken))?.Location;
         Guard.Against.NotFound(location, new LocationNotFoundException(command.LocationId));
 
         var locationInformation = LocationInformation.Create(location!.Id, location.Name);

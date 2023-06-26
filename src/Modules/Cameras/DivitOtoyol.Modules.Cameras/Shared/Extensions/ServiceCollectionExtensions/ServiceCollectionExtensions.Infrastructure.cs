@@ -44,7 +44,7 @@ public static partial class ServiceCollectionExtensions
         services.AddCustomInMemoryCache(configuration)
             .AddCachingRequestPolicies(Assembly.GetExecutingAssembly());
 
-        services.AddCustomGrpcClients(configuration);
+        services.AddCustomHttpClients(configuration);
 
         services.AddSingleton<ILoggerFactory>(new Serilog.Extensions.Logging.SerilogLoggerFactory());
 

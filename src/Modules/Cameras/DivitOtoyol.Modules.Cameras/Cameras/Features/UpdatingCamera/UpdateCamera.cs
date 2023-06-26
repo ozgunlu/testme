@@ -38,14 +38,14 @@ internal class UpdateCameraValidator : AbstractValidator<UpdateCamera>
 internal class UpdateCameraCommandHandler : ICommandHandler<UpdateCamera>
 {
     private readonly ICameraDbContext _cameraDbContext;
-    private readonly ILocationGrpcClient _locationGrpcClient;
+    private readonly ILocationApiClient _locationApiClient;
 
     public UpdateCameraCommandHandler(
         ICameraDbContext cameraDbContext,
-        ILocationGrpcClient locationGrpcClient)
+        ILocationApiClient locationApiClient)
     {
         _cameraDbContext = cameraDbContext;
-        _locationGrpcClient = locationGrpcClient;
+        _locationApiClient = locationApiClient;
     }
 
     public async Task<Unit> Handle(UpdateCamera command, CancellationToken cancellationToken)
@@ -55,7 +55,7 @@ internal class UpdateCameraCommandHandler : ICommandHandler<UpdateCamera>
         var camera = await _cameraDbContext.FindCameraAsync(command.Id);
         Guard.Against.NotFound(camera, new CameraNotFoundException(command.Id));
 
-        var location = (await _locationGrpcClient.GetLocationByIdAsync(command.LocationId, cancellationToken));
+        var location = (await _locationApiClient.GetLocationByIdAsync(command.LocationId, cancellationToken))?.Location;
         Guard.Against.NotFound(location, new LocationNotFoundException(command.LocationId));
 
         var locationInformation = LocationInformation.Create(location!.Id, location.Name);

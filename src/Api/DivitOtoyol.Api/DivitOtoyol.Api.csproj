@@ -8,6 +8,7 @@
     <ProjectReference Include="..\..\Modules\Orders\ECommerce.Modules.Orders\ECommerce.Modules.Orders.csproj" />
     <ProjectReference Include="..\..\Modules\PlateRecognitions\DivitOtoyol.Modules.PlateRecognitions\DivitOtoyol.Modules.PlateRecognitions.csproj" />
     <ProjectReference Include="..\..\Modules\Servers\DivitOtoyol.Modules.Servers\DivitOtoyol.Modules.Servers.csproj" />
+    <ProjectReference Include="..\..\Modules\Statistics\DivitOtoyol.Modules.Statistics\DivitOtoyol.Modules.Statistics.csproj" />
     <ProjectReference Include="..\..\Modules\System\DivitOtoyol.Modules.System\DivitOtoyol.Modules.Systems.csproj" />
     <ProjectReference Include="..\..\Modules\Vehicles\DivitOtoyol.Modules.Vehicles\DivitOtoyol.Modules.Vehicles.csproj" />
   </ItemGroup>

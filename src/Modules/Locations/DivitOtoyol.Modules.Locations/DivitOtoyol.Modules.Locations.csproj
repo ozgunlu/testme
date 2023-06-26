@@ -17,13 +17,6 @@
 
   <ItemGroup>
     <PackageReference Include="Ardalis.ApiEndpoints" />
-    <PackageReference Include="Google.Protobuf" />
-    <PackageReference Include="Grpc" />
-    <PackageReference Include="Grpc.AspNetCore" />
-    <PackageReference Include="Grpc.Tools">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -54,13 +47,4 @@
     <Using Include="Microsoft.Extensions.Logging" />
     <Using Include="System.Reflection" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Locations\Features\GettingCamerasByLocation\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Protobuf Include="Locations\Protos\LocationServiceProto.proto" GrpcServices="Both" />
-  </ItemGroup>
-
 </Project>

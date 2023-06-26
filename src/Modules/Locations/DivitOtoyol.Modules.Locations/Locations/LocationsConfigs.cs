@@ -2,7 +2,6 @@ using Asp.Versioning.Builder;
 using BuildingBlocks.Abstractions.CQRS.Event;
 using BuildingBlocks.Abstractions.Persistence;
 using DivitOtoyol.Modules.Locations.Locations.Data;
-using DivitOtoyol.Modules.Locations.Locations.GrpcServices;
 
 namespace DivitOtoyol.Modules.Locations.Locations;
 
@@ -17,7 +16,6 @@ public static class LocationsConfigs
     {
         services.AddScoped<IDataSeeder, LocationDataSeeder>();
         services.AddSingleton<IEventMapper, LocationEventMapper>();
-        services.AddScoped<ILocationService, LocationService>();
         return services;
     }
 

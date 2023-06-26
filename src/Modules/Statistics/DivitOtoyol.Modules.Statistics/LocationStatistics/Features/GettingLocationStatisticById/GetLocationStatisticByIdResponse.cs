@@ -1,0 +1,5 @@
+using DivitOtoyol.Modules.Statistics.LocationStatistics.Dtos;
+
+namespace DivitOtoyol.Modules.Statistics.LocationStatistics.Features.GettingLocationStatisticById;
+
+public record GetLocationStatisticByIdResponse(LocationStatisticDto LocationStatistic);

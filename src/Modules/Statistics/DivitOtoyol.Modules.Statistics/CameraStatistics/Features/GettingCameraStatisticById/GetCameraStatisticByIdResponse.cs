@@ -1,0 +1,5 @@
+using DivitOtoyol.Modules.Statistics.CameraStatistics.Dtos;
+
+namespace DivitOtoyol.Modules.Statistics.CameraStatistics.Features.GettingCameraStatisticById;
+
+public record GetCameraStatisticByIdResponse(CameraStatisticDto CameraStatistic);
